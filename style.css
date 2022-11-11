@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 210px;
+    background-color: #f4f7fa;
+}
+
+.card {
+    width: 210px;
+    font-size: 14px;
+    
+}
+
+.calendar {
+    text-align: center;
+    color: #fff;
+}
+
+.year {
+    background-color: #ef5321;
+}
+
+.day {
+    background-color: #fe6d40;
+    
+}
+.day p {
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    padding-top: 10px;
+}
+.information {
+    background-color: #ffffff;
+    color: #464646;
+}
+
+.infor {
+    width: 200px;
+    padding: 5px 0 5px 10px;
+}
+
+.information h5 {
+    
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+.information p {
+    margin: 5px 0;
+}
+
+.time {
+    border-bottom: 1px ridge #ffffff;
+}
+
+.fa-solid {
+    padding-right: 5px;   
+}
+
+.click a {
+    color: #3c78a7;
+    text-decoration: none;
+}
