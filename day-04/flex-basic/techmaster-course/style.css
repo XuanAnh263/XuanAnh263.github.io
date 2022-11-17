@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #ced9ea;
+}
+
+#main {
+    width: auto;
+}
+
+/* <-- header --> */
+
+.header {
+    height: 62px;
+    background-color: #39588b;
+}
+
+.nav {
+    
+}
+
+.logo {
+    /* height: 62px; */
+    /* line-height: 60px; */
+    /* width: 20px; */
+}
+
+.logo img  {
+   /* width: 100px; */
+   /* line-height: 62px; */
+}
+
+.nav .logo a {
+    line-height: 62px;
+    height: 62px;
+    
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.nav .subnav {
+    display: none;
+}
+
+.nav li a {
+    color: #fff;
+    line-height: 62px;
+    font-size: 15px;
+}
+
+ /* <-- container --> */
+
+.container {
+    padding-bottom: 48px!important;
+    padding-top: 48px!important;
+    width: 1320px;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #464646;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 0 15px;
+}
+
+/* style card */
+.card {
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.image {
+    height: 220px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    /* padding: 15px; */
+    margin: 16px 24px 0;
+}
+
+.content h3 {
+    color: #464646;
+    font-size: 19px;
+    font-weight: 400;
+    height: 58px;
+    margin-bottom: 16px;
+}
+
+.content p {
+    color: #757575;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.content p span {
+    color: #ffd600;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* <-- footer --> */
+
+.footer {
+    color: #fff;
+    background-color: #30598c;
+}
+
+.contact {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1320px;
+    padding-bottom: 48px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+}
+
+div ul li {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 35px;
+    list-style: none;
+}
+.owner {
+    margin-top: 50px;
+}
+a:link {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    color: gray;
+}
+
+.icon {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 10px 10px 0 !important;
+}
+
+
+li a i {
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0 24px 0 0px;
+}
