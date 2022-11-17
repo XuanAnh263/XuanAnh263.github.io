@@ -1,0 +1,53 @@
+html {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0 0;
+}
+
+#techmaster {
+  color: #fff;
+  background-color: #30598c;
+  font-size: 14px;
+  text-align: center;
+  list-style: none;
+  padding: 48px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+#techmaster ul li {
+  list-style: none;
+}
+
+#techmaster ul li > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main {
+  margin: 0 0 16px;
+}
+
+.about {
+  margin: 0 0 16px;
+}
+
+.counsel {
+  margin: 0 0 16px;
+}
+
+.address {
+  margin: 0 0 16px;
+}
+
+.icon {
+  display: flex;
+  
+  justify-content: space-evenly;
+}

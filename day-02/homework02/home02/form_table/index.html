@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid black;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">ĐĂNG KÝ</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Full name</td>
+        <td><input type="text" placeholder="Nhập fullname" /></td>
+      </tr>
+      <tr>
+        <td>Username</td>
+        <td><input type="text" placeholder="Nhập tên" /></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input type="text" placeholder="Nhập mật khẩu" /></td>
+      </tr>
+      <tr>
+        <td rowspan="2">Nhập lại Password</td>
+        <td><input type="text" placeholder="Nhập lại mật khẩu" /></td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>Giới tính</td>
+        <td>
+          <input type="radio" name="" id="Male" /><label for="Male">Nam</label>
+          <input type="radio" name="" id="Female" /><label for="Female"
+            >Nữ</label
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>Ngày sinh</td>
+        <td>
+          <select>
+            <option>Ngày 1</option>
+            <option>Ngày 2</option>
+          </select>
+          <select>
+            <option>Tháng 1</option>
+            <option>Tháng 2</option>
+          </select>
+          <select>
+            <option>2015</option>
+            <option>2016</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Địa chỉ</td>
+        <td><input type="text" name="" id="" /></td>
+      </tr>
+      <tr>
+        <td>Avatar</td>
+        <td><button type="submit">Choose File</button>No file chosen</td>
+      </tr>
+      <tr>
+        <td>Sở thích</td>
+        <td>
+          <input type="checkbox" name="" id="Movie" /><label for="Movie"
+            >Xem phim</label
+          >
+          <input type="checkbox" name="" id="Sport" /><label for="Sport"
+            >Thể thao</label
+          >
+          <input type="checkbox" name="" id="Web" /><label for="Web">Wed</label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center">
+          <button>Reset</button>
+          <button>OK</button>
+        </td>
+      </tr>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, td, th {
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <!-- rowspan: gộp hàng
+    colspan: gộp cột -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>FullName</th>
+                <th>Position</th>
+                <th>Salary</th>
+            </tr>
+            
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nguyễn Văn A</td>
+                <td>Nhân viên</td>
+                <td>1000$</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Trần Văn B</td>
+                <td>Giám Đốc</td>
+                <td>2000$</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Ngô thị c</td>
+                <td>trưởng phòng kinh doanh</td>
+                <td>2000$</td>
+            </tr>
+            
+        </tbody>
+
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>FullName</th>
+                <th>Position</th>
+                <th>Salary</th>
+            </tr>
+            
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nguyễn Văn A</td>
+                <td>Nhân viên</td>
+                <td>1000$</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">2</td>
+                <td rowspan="2">Trần Văn B</td>
+                <td>Giám Đốc</td>
+                <td>2000$</td>
+            </tr>
+
+            <tr>
+                
+                <td>quản lí nhân sự</td>
+                <td>2000$</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Ngô thị c</td>
+                <td>trưởng phòng kinh doanh</td>
+                <td>2000$</td>
+            </tr>
+            
+        </tbody>
+
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">NO</th>
+                <th rowspan="2">Name</th>
+                <th colspan="2">address</th>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <th>city</th>
+                <th>country</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nguyễn Văn A</td>
+                <td>Nhân viên</td>
+                <td>1000$</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Trần Văn B</td>
+                <td>Giám Đốc</td>
+                <td>2000$</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Ngô thị c</td>
+                <td>trưởng phòng kinh doanh</td>
+                <td>2000$</td>
+            </tr>
+            
+        </tbody>
+
+    </table>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="24">Danh sách ca sỹ</th>
+            </tr>
+
+            <tr>
+                <th>STT</th>
+                <th>Họ và tên</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="2">1</td>
+                <td rowspan="2">Quang thọ</td>
+                <td>quangtho@gmail.com</td>
+            </tr>
+
+            <tr>
+                
+                <td>quantho@yahoo.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    
+</body>
+</html>
