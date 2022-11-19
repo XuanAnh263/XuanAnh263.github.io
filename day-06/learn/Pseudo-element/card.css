@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: #ced9ea;
+  }
+
+  .card {
+    background-color: #fff;
+    margin-bottom: 30px;
+    width: 400px;
+    text-align: center;
+    margin-left: 300px;
+    margin-top: 48px;
+    
+  }
+  
+  .image {
+    height: 220px;
+    
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .content {
+    /* padding: 15px; */
+    margin: 16px 24px 0;
+  }
+  
+  .content h3 {
+    color: #464646;
+    font-size: 19px;
+    font-weight: 400;
+    height: 58px;
+    margin-bottom: 16px;
+  }
+  
+  .content p {
+    color: #757575;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  
+  .content p span {
+    color: #ffd600;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
