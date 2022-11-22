@@ -1,0 +1,102 @@
+/* .box {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+
+  animation: example 3s forwards;
+  position: relative;
+}
+
+@keyframes example {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: 300px;
+    background-color: aqua;
+  }
+  50% {
+    top: 300px;
+    left: 300px;
+    background-color: violet;
+  }
+  75% {
+    top: 300px;
+    left: 0;
+    background-color: #adad;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background-color: red;
+  }
+}
+
+.banner {
+  background-color: #000;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.banner h2 {
+  position: relative;
+  animation: translate 3s;
+}
+
+@keyframes translate {
+  0% {
+    left: 200px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.banner p {
+  position: relative;
+  animation: animat 3s;
+}
+
+@keyframes animat {
+  0% {
+    right: 200px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.banner button {
+    po
+}
+
+
+@keyframes translate {
+    0% {
+        left: 200px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+} */
+
+.banner {
+    background-color: #000;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.banner h2 {
+    animation: lightSpeedInRight;
+    animation-duration: 2s;
+  }

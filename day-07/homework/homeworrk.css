@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Delius+Swash+Caps');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #F72F4E;
+  background-image: url(./fonts/snow1.png), url(./fonts/snow2.png), url(./fonts/snow3.png), url();
+  text-align:center;
+  font-family: 'Delius Swash Caps', cursive;
+  animation: snow 13s infinite;
+  animation-timing-function:linear;
+}
+#main {
+  margin: auto;
+  position: absolute;
+  width: 1000px;
+  width: 100%;
+  top:45%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 50px;
+}
+
+
+
+img {
+  width: 150px;
+  height: 100px;
+  margin: 10px;
+}
+
+
+.inner {
+  display:inline-block;
+}
+
+.content {
+  display: inline-block;
+  text-align: center;
+  width: 400px;
+  height: 250px;
+  font-size: 20px;
+  border: 3px dashed blanchedalmond;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 10px;
+  animation-delay: 4s;
+}
+
+p {
+  font-size: 20px;
+  padding: 10px;
+  animation-delay: 6s;
+}
+
+.headingup {
+  color: #fff;
+  display:inline-block;
+  text-transform: uppercase;
+  padding-top: 150px;
+}
+
+h3 {
+  animation-delay: 2s;
+}
+
+.audio {
+  opacity: 0.3;
+  padding: 20px;
+}
+
+audio {
+  width: 250px;
+  height: 30px;
+}
+
+.img > img {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  animation: noel 4s 7s infinite;
+  /* animation-delay: 4s; */
+}
+
+@keyframes noel {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px;
+  }
+ 100% {
+  background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
+
+.snowflake {
+	color: #fff;
+}
+@-webkit-keyframes snowflakes-fall {
+  0%{
+    top:-10%
+  }
+  100%{
+    top:100%
+  }
+}
+@-webkit-keyframes snowflakes-shake {
+  0%{
+    -webkit-transform:translateX(0px);
+    transform:translateX(0px);
+  }
+  50%{
+    -webkit-transform:translateX(80px);
+    transform:translateX(80px);
+  }
+  100%{
+    -webkit-transform:translateX(0px);
+    transform:translateX(0px);
+  }
+}
+@keyframes snowflakes-fall{
+  0%{
+    top:-10%
+  }
+  100%{
+    top:100%
+  }
+}
+@keyframes snowflakes-shake{
+  0%{
+    transform:translateX(0px)
+  }
+  50%{
+    transform:translateX(80px)
+  }
+  100%{
+    transform:translateX(0px)
+  }
+}
+.snowflake {
+  position:fixed;
+  top:-10%;
+  z-index:9999;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  cursor:default;
+  -webkit-animation-name:snowflakes-fall,snowflakes-shake;
+  -webkit-animation-duration:10s,3s;
+  -webkit-animation-timing-function:linear,ease-in-out;
+  -webkit-animation-iteration-count:infinite,infinite;
+  -webkit-animation-play-state:running,running;
+  animation-name:snowflakes-fall,snowflakes-shake;
+  animation-duration:10s,3s;
+  animation-timing-function:linear,ease-in-out;
+  animation-iteration-count:infinite,infinite;
+  animation-play-state:running,running
+}
+.snowflake:nth-of-type(0) {
+  left:1%;
+  -webkit-animation-delay:0s,0s;
+  animation-delay:0s,0s
+}
+.snowflake:nth-of-type(1) {
+  left:10%;
+  -webkit-animation-delay:1s,1s;
+  animation-delay:1s,1s
+}
+.snowflake:nth-of-type(2) {
+  left:20%;
+  -webkit-animation-delay:6s,.5s;
+  animation-delay:6s,.5s
+}
+.snowflake:nth-of-type(3) {
+  left:30%;
+  -webkit-animation-delay:4s,2s;
+  animation-delay:4s,2s
+}
+.snowflake:nth-of-type(4) {
+  left:40%;
+  -webkit-animation-delay:2s,2s;
+  animation-delay:2s,2s
+}
+.snowflake:nth-of-type(5) {
+  left:50%;
+  -webkit-animation-delay:8s,3s;
+  animation-delay:8s,3s
+}
+.snowflake:nth-of-type(6) {
+  left:60%;
+  -webkit-animation-delay:6s,2s;
+  animation-delay:6s,2s
+}
+.snowflake:nth-of-type(7) {
+  left:70%;
+  -webkit-animation-delay:2.5s,1s;
+  animation-delay:2.5s,1s
+}
+.snowflake:nth-of-type(8) {
+  left:80%;
+  -webkit-animation-delay:1s,0s;
+  animation-delay:1s,0s
+}
+.snowflake:nth-of-type(9) {
+  left:90%;
+  -webkit-animation-delay:3s,1.5s;
+  animation-delay:3s,1.5s
+}
