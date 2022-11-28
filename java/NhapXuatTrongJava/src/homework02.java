@@ -63,7 +63,7 @@ public class homework02 {
         System.out.println("Chuỗi "
                 + "\"" + sayhello + "\"" + " " + "có chứa chuỗi "
                 + "\"" + hello + "\"" + "hay không : "
-                + sayhello.equals(hello));
+                + sayhello.contains(hello));
     }
 
 }
