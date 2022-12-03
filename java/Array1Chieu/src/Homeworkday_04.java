@@ -34,6 +34,7 @@ public class Homeworkday_04 {
         System.out.println("Họ và tên sau khi in hoa : \n" + fullName);
 
         System.out.println("\n---------------------------------");
+        System.out.println("Bài 2: ");
 
         //2.
         int option;
