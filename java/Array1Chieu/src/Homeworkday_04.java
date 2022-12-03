@@ -46,7 +46,7 @@ public class Homeworkday_04 {
             showMenu();
 
             do {
-                System.out.print("Nhập lựa chọn (1/2/3/4/5): ");
+                System.out.print("Nhập lựa chọn : ");
                 option = scanner.nextInt();
             } while (option < 1 || option > 5);
 
