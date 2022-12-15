@@ -40,7 +40,7 @@ public class FilmControler {
             }
         }
     }
-
+    
     public void showMenu() {
         System.out.println("\n----------Menu----------");
         System.out.println("1. In thông tin phim ra màn hình");
