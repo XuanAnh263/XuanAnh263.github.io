@@ -1,16 +1,26 @@
 package home_work_day08.model;
 
-public class Serial extends Movie {
+public class Serial extends Film {
     private int episodes;
     private int avgTime;
 
     public Serial() {
     }
 
-    public Serial(int id, String title, String category, String director, int premiereDate, int time, int episodes, int avgTime) {
-        super(id, title, category, director, premiereDate, time);
+    public Serial(int id, String title, String category, String director, int premiereDate, int episodes, int avgTime) {
+        super(id, title, category, director, premiereDate,);
         this.episodes = episodes;
         this.avgTime = avgTime;
+    }
+    
+    public void display() {
+        System.out.println("ID " + this.getId());
+        System.out.println("TITLE " + this.getTitle());
+        System.out.println("CATEGORY " + this.getCategory());
+        System.out.println("DIRECTOR " + this.getDirector());
+        System.out.println("PREMIEREDATE " + this.getPremiereDate());
+        System.out.println("EPISODES " + this.getEpisodes());
+        System.out.println("AVETIME " + this.getAvgTime());
     }
 
     public int getEpisodes() {
