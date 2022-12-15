@@ -10,8 +10,8 @@ public class FilmDatabase {
     };
 
     public static Serial[] serials = {
-            new Serial(3, "Batman", "Action", "David", 2018, 50, 3, 40),
-            new Serial(4, "Wonder Women", "Action", "Tom", 2017, 40, 5, 29),
+            new Serial(3, "Batman", "Action", "David", 2018, 3, 40),
+            new Serial(4, "Wonder Women", "Action", "Tom", 2017, 5, 29),
 
     };
 }
