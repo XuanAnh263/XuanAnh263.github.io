@@ -33,7 +33,7 @@ public class EmployeeRepository {
         ArrayList<EmployeeModel> rs1 = new ArrayList<>();
         for (EmployeeModel i: EmployeeDatabase.employeeModels) {
             if (i.getId() == id) {
-                rs1.add(i);
+                return i;
             }
         }
         return null; //id không phải mảng nên return null
