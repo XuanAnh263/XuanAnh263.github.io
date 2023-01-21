@@ -1,0 +1,35 @@
+[
+  {
+    "userName": "Xuân Anh",
+    "email": "anh123@gmail.com",
+    "password": "Anh97@",
+    "phone": "0969888888",
+    "address": {
+      "city": "Hn",
+      "district": "BTL",
+      "street": "-"
+    }
+  },
+  {
+    "userName": "Hằng",
+    "email": "hang@gmail.com",
+    "password": "Hang!23456",
+    "phone": "0987654321",
+    "address": {
+      "city": "HN",
+      "district": "",
+      "street": ""
+    }
+  },
+  {
+    "userName": "tuanh",
+    "email": "tu123@gmail.com",
+    "password": "Tuanh123@",
+    "phone": "0987654321",
+    "address": {
+      "city": "ha noi",
+      "district": "cau giay",
+      "street": "dich vong"
+    }
+  }
+]
