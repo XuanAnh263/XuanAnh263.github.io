@@ -17,11 +17,11 @@ public class _278_FirstBadVersion {
         return left;
     }
 
-    private static boolean isBadVersion(int version) {
-        //theo đề bài:
-        //API isBadVersion được định nghĩa trong lớp mẹ VersionControl.
-        //      boolean isBadVersion(int version)
-        int bad = 4; // lấy bad ở Exam: 1
-        return version >= bad;
-    }
+//     private static boolean isBadVersion(int version) {
+//         //theo đề bài:
+//         //API isBadVersion được định nghĩa trong lớp mẹ VersionControl.
+//         //      boolean isBadVersion(int version)
+//         int bad = 4; // lấy bad ở Exam: 1
+//         return version >= bad;
+//     }
 }
