@@ -17,8 +17,8 @@ public class _374_GuessNumberHigherOrLower {
         return -1;
     }
 
-    private int guess(int num) {
-        int pick = 6;//lấy pick ở Exam 1
-        return num;
-    }
+//     private int guess(int num) {
+//         int pick = 6;//lấy pick ở Exam 1
+//         return num;
+//     }
 }
