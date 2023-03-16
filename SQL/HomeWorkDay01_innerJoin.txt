@@ -1,0 +1,14 @@
+1.
+SELECT student.*, scores.diemToan FROM student INNER JOIN scores ON student.id = scores.sinhVien_id WHERE scores.diemToan = (SELECT MAX(diemToan) FROM scores);
+
+2.
+SELECT student.*, scores.diemVan FROM student INNER JOIN scores ON student.id = scores.sinhVien_id WHERE scores.diemVan = (SELECT MIN(diemVan) FROM scores);
+
+3.
+SELECT student.*, scores.diemToan, scores.diemVan, scores.diemAnh 
+FROM student 
+INNER JOIN scores ON student.id = scores.sinhVien_id 
+WHERE (scores.diemToan) = (SELECT MIN(diemToan) FROM scores
+                           ) OR scores.diemVan = (SELECT MIN(diemVan) FROM scores
+                           ) OR scores.diemAnh = (SELECT MIN(diemAnh) FROM scores
+                                                  );
