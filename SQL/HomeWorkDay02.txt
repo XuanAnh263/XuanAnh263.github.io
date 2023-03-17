@@ -1,0 +1,34 @@
+1.
+SELECT sinhvien_id, MAX(sum_toan) FROM (
+    SELECT tbl_diem.sinhvien_id, SUM(tbl_diem.diem_toan) AS sum_toan
+    FROM tbl_diem
+    GROUP BY tbl_diem.sinhvien_id
+    ORDER BY sum_toan DESC
+    ) AS QUERY
+    
+
+2.
+SELECT tbl_sinhvien.email FROM tbl_sinhvien WHERE tbl_sinhvien.id = (
+    SELECT sinhvien_id FROM (
+        SELECT sinhvien_id, MAX(sum_van) FROM (
+            SELECT tbl_diem.sinhvien_id, SUM(tbl_diem.diem_van) AS sum_van
+            FROM tbl_diem
+            GROUP BY tbl_diem.sinhvien_id
+            ORDER BY sum_van DESC
+            )AS QUERY
+        )AS QUERY
+    )
+
+3.
+SELECT tbl_lop.ten_lop FROM tbl_lop WHERE tbl_lop.id = 
+(SELECT tbl_sinhvien.lop_id FROM tbl_sinhvien WHERE tbl_sinhvien.id =
+	(SELECT sinhvien_id FROM
+       		 (SELECT sinhvien_id, MAX(sum_anh) FROM
+			(SELECT tbl_diem.sinhvien_id, SUM(tbl_diem.diem_anh) AS sum_anh 
+				FROM tbl_diem
+				GROUP BY tbl_diem.sinhvien_id
+				ORDER BY sum_anh DESC
+			) AS QUERY
+		) AS QUERY
+    	)
+)
