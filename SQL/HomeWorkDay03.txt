@@ -1,0 +1,125 @@
+1. Đưa ra thông tin gồm mã số, họ tên và tên khoa của tất cả các giảng viên
+
+SELECT tblgiangvien.Hotengv, tblgiangvien.Magv, tblkhoa.Tenkhoa FROM tblgiangvien 
+INNER JOIN tblkhoa ON  tblgiangvien.Makhoa = tblkhoa.Makhoa;
+
+
+2. Đưa ra thông tin gồm mã số, họ tên và tên khoa của các giảng viên của khoa 
+‘DIA LY va QLTN’
+
+SELECT tblgiangvien.Magv,  tblgiangvien.Hotengv, tblkhoa.Tenkhoa FROM tblgiangvien 
+INNER JOIN tblkhoa ON  tblgiangvien.Makhoa = tblkhoa.Makhoa
+WHERE tblkhoa.Tenkhoa LIKE '%dia%ly%QLTN%'
+
+3. Cho biết số sinh viên của khoa ‘CONG NGHE SINH HOC’
+
+SELECT COUNT(*) FROM tblsinhvien
+INNER JOIN tblkhoa ON tblsinhvien.Makhoa = tblkhoa.Makhoa
+WHERE tblkhoa.Tenkhoa LIKE '%cong%nghe%sinh%hoc'
+
+4. Đưa ra danh sách gồm mã số, họ tên và tuổi của các sinh viên khoa ‘TOAN’
+
+SELECT tblsinhvien.Masv,tblsinhvien.Hotensv, tblsinhvien.Namsinh FROM tblsinhvien
+INNER JOIN tblkhoa ON tblsinhvien.Makhoa = tblkhoa.Makhoa
+WHERE tblkhoa.Tenkhoa LIKE '%toan%'
+
+
+5. Cho biết số giảng viên của khoa ‘CONG NGHE SINH HOC’
+
+SELECT tblgiangvien.Hotengv, COUNT(*) as count FROM tblgiangvien
+INNER JOIN tblkhoa ON tblgiangvien.Makhoa = tblkhoa.Makhoa
+WHERE tblkhoa.Tenkhoa LIKE '%cong%nghe%sinh%hoc'
+
+6. Cho biết thông tin về sinh viên không tham gia thực tập
+
+SELECT tblsinhvien.* FROM tblsinhvien
+WHERE NOT EXISTS (
+    SELECT *
+    FROM tblhuongdan
+    WHERE tblsinhvien.Masv = tblhuongdan.Masv
+);
+
+7. Đưa ra mã khoa, tên khoa và số giảng viên của mỗi khoa
+
+SELECT tblgiangvien.Hotengv, tblkhoa.Makhoa, tblkhoa.Tenkhoa FROM tblkhoa
+INNER JOIN tblgiangvien ON tblkhoa.Makhoa = tblgiangvien.Makhoa
+
+8. Cho biết số điện thoại của khoa mà sinh viên có tên ‘Le van son’ đang theo 
+học
+
+SELECT tblkhoa.Dienthoai FROM tblkhoa
+INNER JOIN tblsinhvien ON tblsinhvien.Makhoa = tblkhoa.Makhoa
+WHERE tblsinhvien.Hotensv LIKE '%le%van%son'
+
+9. Cho biết mã số và tên của các đề tài do giảng viên ‘Tran son’ hướng dẫn
+
+SELECT tbldetai.Madt, tbldetai.Tendt FROM tbldetai
+INNER JOIN tblhuongdan ON tbldetai.Madt = tblhuongdan.Madt
+INNER JOIN tblgiangvien ON tblgiangvien.Magv = tblhuongdan.Magv
+WHERE tblgiangvien.Hotengv LIKE '%tran%son%'
+
+10. Cho biết tên đề tài không có sinh viên nào thực tập
+
+SELECT tbldetai.Tendt FROM tbldetai
+WHERE NOT EXISTS (
+    SELECT tblhuongdan.Madt
+    FROM tblhuongdan
+    WHERE tbldetai.Madt = tblhuongdan.Madt
+    );
+
+11.Cho biết mã số, họ tên, tên khoa của các giảng viên hướng dẫn từ 3 sinh
+viên trở lên.
+
+SELECT tblgiangvien.Magv, tblgiangvien.Hotengv, tblkhoa.Tenkhoa, COUNT(*) AS solan
+FROM tblhuongdan
+INNER JOIN tblgiangvien ON tblgiangvien.Magv = tblhuongdan.Magv
+INNER JOIN tblkhoa ON tblgiangvien.Makhoa = tblkhoa.Makhoa
+GROUP BY tblgiangvien.Magv, tblgiangvien.Hotengv, tblkhoa.Tenkhoa
+HAVING COUNT(tblhuongdan.Magv) >= 2;
+
+12.Cho biết mã số, tên đề tài của đề tài có kinh phí cao nhất
+
+SELECT tbldetai.Madt, tbldetai.Tendt, tbldetai.Kinhphi FROM tbldetai
+WHERE tbldetai.Kinhphi = (SELECT MAX(Kinhphi) FROM tbldetai);
+
+13.Cho biết mã số và tên các đề tài có nhiều hơn 2 sinh viên tham gia thực
+tập
+
+SELECT tbldetai.Madt, tbldetai.Tendt, COUNT(*) AS detai
+FROM tbldetai
+INNER JOIN tblhuongdan ON tbldetai.Madt = tblhuongdan.Madt
+GROUP BY tbldetai.Madt, tbldetai.Tendt
+HAVING COUNT(tbldetai.Madt) >= 2;
+
+14.Đưa ra mã số, họ tên và điểm của các sinh viên khoa ‘DIALY và QLTN’
+
+SELECT tblsinhvien.Masv, tblsinhvien.Hotensv, tblhuongdan.KetQua FROM tblsinhvien
+INNER JOIN tblhuongdan ON tblsinhvien.Masv = tblhuongdan.Masv
+INNER JOIN tblkhoa ON tblkhoa.Makhoa = tblsinhvien.Makhoa
+WHERE tblkhoa.Tenkhoa LIKE '%dia%ly%va%QLTN%'
+
+15.Đưa ra tên khoa, số lượng sinh viên của mỗi khoa
+
+SELECT tblkhoa.Tenkhoa, COUNT(*) AS soLuongSV FROM tblkhoa
+INNER JOIN tblsinhvien ON tblsinhvien.Makhoa = tblkhoa.Makhoa
+GROUP BY tblkhoa.Tenkhoa;
+
+16.Cho biết thông tin về các sinh viên thực tập tại quê nhà
+
+SELECT tblsinhvien.* FROM tblsinhvien
+INNER JOIN tbldetai ON tblsinhvien.Quequan = tbldetai.Noithuctap
+
+17.Hãy cho biết thông tin về những sinh viên chưa có điểm thực tập
+
+SELECT tblsinhvien.* FROM tblsinhvien
+WHERE NOT EXISTS (
+    SELECT * FROM tblhuongdan
+    WHERE tblhuongdan.Masv = tblsinhvien.Masv);
+    
+ 
+18.Đưa ra danh sách gồm mã số, họ tên các sinh viên có điểm thực tập bằng 0
+
+SELECT tblsinhvien.* FROM tblsinhvien
+WHERE NOT EXISTS (
+    SELECT tblhuongdan.KetQua FROM tblhuongdan
+    WHERE tblhuongdan.Masv = tblsinhvien.Masv);
