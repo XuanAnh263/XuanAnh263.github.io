@@ -119,7 +119,6 @@ WHERE NOT EXISTS (
  
 18.Đưa ra danh sách gồm mã số, họ tên các sinh viên có điểm thực tập bằng 0
 
-SELECT tblsinhvien.* FROM tblsinhvien
-WHERE NOT EXISTS (
-    SELECT tblhuongdan.KetQua FROM tblhuongdan
-    WHERE tblhuongdan.Masv = tblsinhvien.Masv);
+SELECT tblsinhvien.Masv, tblsinhvien.Hotensv, tblhuongdan.KetQua FROM tblsinhvien
+LEFT JOIN tblhuongdan ON tblsinhvien.Masv = tblhuongdan.Masv
+WHERE tblhuongdan.KetQua = 0;
