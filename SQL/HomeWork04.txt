@@ -1,0 +1,82 @@
+20. Trị giá trung bình của tất cả các hóa đơn được bán ra trong năm 2006 là bao nhiêu?
+
+SELECT AVG(total) FROM hoadon WHERE YEAR(hoadon.purchase_day) = 2021;
+
+21. Tính doanh thu bán hàng trong năm 2006.
+
+SELECT SUM(total) FROM hoadon WHERE YEAR(hoadon.purchase_day) = 2021;
+
+22. Tìm số hóa đơn có trị giá cao nhất trong năm 2006.
+
+SELECT hoadon.invoice_id, hoadon.total FROM hoadon 
+WHERE hoadon.total = ( 
+    SELECT MAX(hoadon.total) FROM hoadon
+    WHERE YEAR(hoadon.purchase_day) = 2021
+);
+
+23. Tìm họ tên khách hàng đã mua hóa đơn có trị giá cao nhất trong năm 2021.
+
+SELECT khachhang.name AS tenKH  FROM khachhang
+INNER JOIN hoadon ON khachhang.id = hoadon.customer_id
+WHERE hoadon.total = ( 
+    SELECT MAX(hoadon.total) FROM hoadon
+    WHERE YEAR(hoadon.purchase_day) = 2021
+);
+
+24. In ra danh sách 3 khách hàng (MAKH, HOTEN) có doanh số cao nhất.
+
+SELECT khachhang.id, khachhang.name FROM khachhang
+ORDER BY khachhang.doanhSo DESC LIMIT 3;
+
+25. In ra danh sách các sản phẩm (MASP, TENSP) có giá bán bằng 1 trong 3 mức giá cao nhất.
+
+SELECT sanpham.product_id, sanpham.product_name FROM sanpham
+JOIN (SELECT sanpham.product_id, sanpham.product_name, DENSE_RANK() over(ORDER BY sanpham.unit_price DESC) AS Rank 
+      FROM sanpham)  SP
+      ON SP.product_id = sanpham.product_id
+      WHERE SP.Rank <= 3;
+
+26. In ra danh sách các sản phẩm (MASP, TENSP) do “Trung Quốc” sản xuất có giá bằng 1 trong 3 mức iá thấp nhất (của tất cả các sản phẩm).
+
+SELECT sanpham.product_id, sanpham.product_name FROM sanpham
+WHERE sanpham.country = 'Trung Quoc' 
+AND sanpham.product_id 
+IN (SELECT sanpham.product_id FROM sanpham
+    JOIN(SELECT sanpham.product_id, sanpham.product_name, DENSE_RANK() 
+    over(ORDER BY sanpham.unit_price ASC) AS Rank 
+      FROM sanpham)  SP
+      ON SP.product_id = sanpham.product_id
+      WHERE SP.Rank <= 3);
+
+27. In ra danh sách các sản phẩm (MASP, TENSP) do “Trung Quốc” sản xuất có giá bằng 1 trong 3 mức iá thấp nhất (của sản phẩm do “Trung Quốc” sản xuất).
+
+SELECT sanpham.product_id, sanpham.product_name FROM sanpham
+WHERE sanpham.country = 'Trung Quoc' 
+AND sanpham.product_id 
+IN (
+    SELECT sanpham.product_id FROM sanpham
+    JOIN(SELECT sanpham.product_id, sanpham.product_name,
+    DENSE_RANK() over(ORDER BY sanpham.unit_price ASC) AS Rank 
+      FROM sanpham
+      WHERE sanpham.country = 'Trung Quoc' 
+        )  SP
+      ON SP.product_id = sanpham.product_id
+      WHERE SP.Rank <= 3);
+
+28. In ra danh sách 3 khách hàng (MAKH, HOTEN) có doanh số cao nhất (sắp xếp theo kiểu xếp hạng).
+
+SELECT khachhang.id, khachhang.name, DENSE_RANK() OVER(ORDER BY khachhang.doanhSo DESC) AS Rank
+FROM khachhang LIMIT 3;
+
+29. Tính tổng số sản phẩm do “Trung Quốc” sản xuất.
+
+SELECT COUNT(sanpham.country) AS Sum_SP_TQ_SX
+FROM sanpham
+WHERE sanpham.country = 'trung quoc'
+
+30. Tính tổng số sản phẩm của từng nước sản xuất.
+
+SELECT sanpham.country, COUNT(sanpham.country) AS Sum_SP
+FROM sanpham
+GROUP BY sanpham.country
+
