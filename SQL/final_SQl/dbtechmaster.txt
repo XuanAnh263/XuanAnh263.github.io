@@ -1,0 +1,23 @@
+Database gồm các table: Users, Roles, Classes, Classrooms, Status, Scores, Attendances, Courses, Lessons, Subjects, Homeworks, Comments và Type_of_comments
+
+
+1. Users gồm các trường thông tin cá nhân cơ bản trong đó cần chú ý:
+- role_id nối với bảng roles
+	+ Admin có quyền tạo tài khoản, điều chỉnh các quyền của giảng viên và học viên
+	+ Giảng viên có quyền chấm bài và đăng bài giảng, nhận xét bài tập về nhà của học viên
+- Một giảng viên có thể tham gia giảng dạy nhiều lớp do vậy ta tạo thêm table Classrooms làm bảng trung gian giữa 2 bảng Users và Classes
+2. roles có phân quyền cho supadmin, admin, teacher, student
+3. status: key: 0,1,2,3,4 thể hiện thông báo thành công, thất bại, đang xử lý, ẩn, hiện
+4. class: chứa các thông tin liên quan tới lớp học
+5. score:	
+		-biết thông tin bài giảng
+		-biết điểm số bài tập, lời nhận xét của giáo viên  
+6. attendances: điểm danh học viên của lớp theo từng ngày học
+7. coures: các thông tin về khóa học
+8. lessons: phần bài giảng được giảng viên up lên
+9. homeworks: 
+		- chứa thông tin học viên
+		- nộp bài cho bài học nào
+		- thờn gian nộp
+10. comments: mọi người có thể trao đổi trong này có các trường có thể xác định thông tin người comment
+11: subject: các môn học trong 1 khóa học
