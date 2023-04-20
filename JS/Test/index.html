@@ -177,13 +177,14 @@
 
       function add_more_image() {
         // khi click vao button More images thi add thêm ảnh vào dưới album
-        let count_image = document.querySelectorAll(".container img").length;
+        let count_image;
         console.log(count_image);
         // code ajax mẫu cho API này
         $.ajax({
           url: "https://dog.ceo/api/breeds/image/random",
           type: "GET",
           success: function (data) {
+            count_image = document.querySelectorAll(".container img").length;
             let new_image = ` <div id="img_${
               count_image + 1
             }" class="image_card flex w-1/4 flex-wrap" onclick="click_image(${
