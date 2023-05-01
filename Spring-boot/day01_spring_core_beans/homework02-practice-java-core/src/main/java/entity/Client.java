@@ -50,13 +50,13 @@ public class Client extends Person {
         }while (true);
         switch (choice) {
             case 1:
-                this.setLevel(ClientLevel.LEVEL_1);
+                this.setLevel(ClientLevel.ca_nhan);
                 break;
             case 2:
-                this.setLevel(ClientLevel.LEVEL_2);
+                this.setLevel(ClientLevel.dai_dien_don_vi_hanh_chinh);
                 break;
             case 3:
-                this.setLevel(ClientLevel.LEVEL_3);
+                this.setLevel(ClientLevel.dai_dien_don_vi_kinh_doanh);
                 return;
         }
     }
