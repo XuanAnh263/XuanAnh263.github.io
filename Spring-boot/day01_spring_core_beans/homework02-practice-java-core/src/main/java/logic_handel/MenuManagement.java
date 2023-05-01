@@ -28,7 +28,7 @@ public class MenuManagement {
                 case 3:
                     billManagement.logBill();
                     break;
-                case 4:
+               case 4:
                     System.out.println("Sắp xếp theo tên");
                     billManagement.sortByName();
 
@@ -36,6 +36,7 @@ public class MenuManagement {
                     billManagement.sortByUsage();
                     break;
                 case 5:
+                    billManagement.calculateTotal();
                     break;
                 case 6:
                     return;
