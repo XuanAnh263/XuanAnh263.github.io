@@ -20,8 +20,6 @@ public class BillManagement {
 
     }
 
-
-
     public void logBill() {
         System.out.println("Bạn muốn lập hóa đơn cho bao nhiêu khách hàng");
         int clientNumber;
@@ -95,10 +93,34 @@ public class BillManagement {
             Bill bill = new Bill(client, billDetails);
             bills.add(bill);
         }
-        showInfo();
+        mergeBills();
     }
+    
+    public void mergeBills() {
+        Map<Integer, List<Bill>> billMap = bills.stream().collect(Collectors.groupingBy(bill -> bill.getClient().getId()));
 
+        List<Bill> mergedBills = new ArrayList<>();
+        for (Map.Entry<Integer, List<Bill>> entry : billMap.entrySet()) {
+            List<Bill> clientBills = entry.getValue();
+            if (clientBills.size() > 1) {
 
+                Client client = clientManagement.findById(entry.getKey());
+                List<BillDetail> billDetails = new ArrayList<>();
+                for (Bill b : clientBills) {
+                    billDetails.addAll(b.getBillDetails());
+                }
+                Bill mergedBill = new Bill(client, billDetails);
+                mergedBills.add(mergedBill);
+            } else {
+
+                mergedBills.addAll(clientBills);
+            }
+        }
+
+        this.bills = mergedBills;
+        showInfo();
+
+    }
 
     public void sortByName() {
         Collections.sort(bills, new Comparator<Bill>() {
@@ -111,9 +133,39 @@ public class BillManagement {
     }
 
     public void sortByUsage() {
-        Comparator<BillDetail> usageComparator = Comparator.comparingInt(BillDetail::getUsage).reversed();
-        bills.forEach(bill -> Collections.sort(bill.getBillDetails(), usageComparator));
+        bills.sort((o1, o2) -> {
+            int totalUsage1 = 0;
+            for (BillDetail detail : o1.getBillDetails()) {
+                totalUsage1 += detail.getQuantity();
+            }
+            int totalUsage2 = 0;
+            for (BillDetail detail : o2.getBillDetails()) {
+                totalUsage2 += detail.getQuantity();
+            }
+            return Integer.compare(totalUsage2, totalUsage1);
+        });
         showInfo();
+    }
+    
+    public void calculateTotal() {
+        Map<Client, List<Bill>> clientBillMap = new HashMap<>();
+        for (Bill bill : bills) {
+            Client client = bill.getClient();
+            List<Bill> billListForClient = clientBillMap.getOrDefault(client, new ArrayList<>());
+            billListForClient.add(bill);
+            clientBillMap.put(client, billListForClient);
+        }
+
+        for (Client client : clientBillMap.keySet()) {
+            double totalAmount = 0;
+            for (Bill bill : clientBillMap.get(client)) {
+                for (BillDetail billDetail : bill.getBillDetails()) {
+                    totalAmount += billDetail.getService().getPrice() * billDetail.getQuantity();
+                }
+            }
+            System.out.println("Tên khách hàng: " + client.getName() + ", Tổng tiền phải trả: " + totalAmount);
+        }
+
     }
 
     public void showInfo() {
