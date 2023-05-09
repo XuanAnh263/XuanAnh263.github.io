@@ -13,12 +13,11 @@ public class GreetingController {
     public static void main(String[] args) {
         SpringApplication.run(GreetingController.class, args);
     }
-
-
-//    @GetMapping("/greeting")
-//    public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
-//        model.addAllAttributes("name", name);
-//        return "greeting";
-//    }
+    
+	@GetMapping("/greeting")
+	public String greeting(@RequestParam(name = "name", required = false, defaultValue = "Xuan Anh") String name, Model model) {
+		model.addAttribute("name", name);
+		return "greeting";
+	}
 
 }
