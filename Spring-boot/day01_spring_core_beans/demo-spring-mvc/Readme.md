@@ -1,14 +1,14 @@
 
 						-------------------- SPRING MVC --------------------
-1.What:
+1. What:
 	- Spring MVC là một framework mô hình MVC (Model-View-Controller) để xây dựng các ứng dụng web Java. Nó cung cấp các thành phần, tiện ích và quy tắc để phát triển các ứng dụng web dễ dàng và hiệu quả.
-2.How:
+2. How:
 	Spring MVC cho phép phát triển các ứng dụng web Java bằng cách phân chia các thành phần của ứng dụng thành các phần khác nhau, bao gồm:
 	- Model: Lớp đại diện cho dữ liệu và luật nghiệp vụ của ứng dụng.
 	- View: Phần hiển thị dữ liệu cho người dùng.
  	- Controller: Lớp xử lý yêu cầu của người dùng và điều phối các hoạt động giữa Model và View.
 	Spring MVC sử dụng các annotation để định nghĩa các lớp, phương thức và thuộc tính trong ứng dụng. Nó cũng cung cấp các lớp hỗ trợ như các lớp xử lý định tuyến, bộ điều khiển của Form và các lớp hỗ trợ bảo mật.
-3.Why:
+3. Why:
 	Spring MVC cung cấp nhiều lợi ích để phát triển các ứng dụng web Java, bao gồm:
 	- Phân chia rõ ràng: Giúp phân chia các thành phần của ứng dụng thành các phần khác nhau, giúp quản lý mã dễ dàng hơn và giảm thiểu sự phụ thuộc giữa các thành phần.
  	- Dễ dàng kiểm thử: Giúp phát hiện các lỗi và sửa chúng một cách nhanh chóng.
@@ -17,7 +17,7 @@
 	- Hiệu suất: Cung cấp tính năng tối ưu hóa hiệu suất và giảm thiểu thời gian phản hồi của ứng dụng.
 	- Dễ dàng mở rộng: Là một framework linh hoạt và dễ dàng mở rộng, cho phép phát triển ứng dụng lớn một cách dễ dàng. Cộng đồng: Có một cộng đồng lớn và tích cực, cung cấp các tài liệu hướng dẫn.
 	
-4.When:
+4. When:
 	Spring MVC được sử dụng để phát triển các ứng dụng web Java với các yêu cầu khác nhau, bao gồm:
 	- Phát triển các ứng dụng web động: Spring MVC cho phép phát triển các ứng dụng web động với các tính năng như thêm, sửa, xóa và tìm kiếm dữ liệu.
 	- Phát triển các ứng dụng web có tính năng phức tạp: Spring MVC cho phép phát triển các ứng dụng web có tính năng phức tạp và đa dạng, bao gồm các tính năng như xử lý đăng nhập, quản lý phiên và bảo mật ứng dụng.
