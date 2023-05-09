@@ -2,14 +2,12 @@
 						-------------------- SPRING MVC --------------------
 1.What:
 	- Spring MVC là một framework mô hình MVC (Model-View-Controller) để xây dựng các ứng dụng web Java. Nó cung cấp các thành phần, tiện ích và quy tắc để phát triển các ứng dụng web dễ dàng và hiệu quả.
-
 2.How:
 	Spring MVC cho phép phát triển các ứng dụng web Java bằng cách phân chia các thành phần của ứng dụng thành các phần khác nhau, bao gồm:
 	- Model: Lớp đại diện cho dữ liệu và luật nghiệp vụ của ứng dụng.
 	- View: Phần hiển thị dữ liệu cho người dùng.
  	- Controller: Lớp xử lý yêu cầu của người dùng và điều phối các hoạt động giữa Model và View.
 	Spring MVC sử dụng các annotation để định nghĩa các lớp, phương thức và thuộc tính trong ứng dụng. Nó cũng cung cấp các lớp hỗ trợ như các lớp xử lý định tuyến, bộ điều khiển của Form và các lớp hỗ trợ bảo mật.
-
 3.Why:
 	Spring MVC cung cấp nhiều lợi ích để phát triển các ứng dụng web Java, bao gồm:
 	- Phân chia rõ ràng: Giúp phân chia các thành phần của ứng dụng thành các phần khác nhau, giúp quản lý mã dễ dàng hơn và giảm thiểu sự phụ thuộc giữa các thành phần.
@@ -18,6 +16,7 @@
 	- Bảo mật: Cung cấp tính năng bảo mật, giúp giảm thiểu các lỗ hổng bảo mật trong ứng dụng web.
 	- Hiệu suất: Cung cấp tính năng tối ưu hóa hiệu suất và giảm thiểu thời gian phản hồi của ứng dụng.
 	- Dễ dàng mở rộng: Là một framework linh hoạt và dễ dàng mở rộng, cho phép phát triển ứng dụng lớn một cách dễ dàng. Cộng đồng: Có một cộng đồng lớn và tích cực, cung cấp các tài liệu hướng dẫn.
+	
 4.When:
 	Spring MVC được sử dụng để phát triển các ứng dụng web Java với các yêu cầu khác nhau, bao gồm:
 	- Phát triển các ứng dụng web động: Spring MVC cho phép phát triển các ứng dụng web động với các tính năng như thêm, sửa, xóa và tìm kiếm dữ liệu.
@@ -31,21 +30,20 @@
 
 
 						-------------------- THYMELEAF --------------------
-
+						
 1. What:
 	- Thymeleaf là một template engine, tức là một công cụ giúp bạn tạo ra các giao diện người dùng cho ứng dụng web của mình. Thymeleaf cho phép bạn viết các mẫu HTML, CSS và JavaScript để tạo các giao diện động cho ứng dụng web của bạn.
 
 2. How:
 	- Thymeleaf được tích hợp vào Spring Framework và có thể sử dụng để tạo các mẫu HTML cho các ứng dụng web Java. Để sử dụng Thymeleaf, bạn cần thêm thư viện Thymeleaf vào dự án của mình và cấu hình cho Spring để sử dụng Thymeleaf.
-
-	Để tạo một mẫu Thymeleaf, bạn sử dụng các thẻ HTML thông thường nhưng với các thuộc tính Thymeleaf. Thuộc tính Thymeleaf cho phép bạn liên kết dữ liệu từ Spring Controller vào các thành phần trên giao diện, hoặc thực hiện các tính toán và điều kiện để đưa ra các quyết định hiển thị cho người dùng.
+	- Để tạo một mẫu Thymeleaf, bạn sử dụng các thẻ HTML thông thường nhưng với các thuộc tính Thymeleaf. Thuộc tính Thymeleaf cho phép bạn liên kết dữ liệu từ Spring Controller vào các thành phần trên giao diện, hoặc thực hiện các tính toán và điều kiện để đưa ra các quyết định hiển thị cho người dùng.
 3. Why:
-	Thymeleaf có nhiều lợi ích cho việc phát triển ứng dụng web Java, bao gồm:
+ 	Thymeleaf có nhiều lợi ích cho việc phát triển ứng dụng web Java, bao gồm:
 	- Thymeleaf giúp tạo ra các giao diện động cho ứng dụng web, giúp cho giao diện của ứng dụng của bạn trở nên thân thiện hơn với người dùng.
 	- Thymeleaf có thể tích hợp với Spring Framework, giúp cho việc phát triển ứng dụng web Java dễ dàng hơn.
-	- Thymeleaf cho phép bạn sử dụng các thuộc tính để liên kết dữ liệu từ Spring Controller vào giao diện, giúp cho việc hiển thị dữ liệu trên giao diện trở nên dễ dàng hơn.
+	- Thymeleaf cho phép sử dụng các thuộc tính để liên kết dữ liệu từ Spring Controller vào giao diện, giúp cho việc hiển thị dữ liệu trên giao diện trở nên dễ dàng hơn.
 4. When:
 	Sử dụng Thymeleaf trong các trường hợp sau:
-	- Khi bạn cần tạo ra các giao diện động cho ứng dụng web của mình.
-	- Khi bạn sử dụng Spring Framework để phát triển ứng dụng web của mình.
-	- Khi bạn cần liên kết dữ liệu từ Spring Controller vào giao diện để hiển thị dữ liệu cho người dùng.
+	- Khi cần tạo ra các giao diện động cho ứng dụng web của mình.
+	- Khi sử dụng Spring Framework để phát triển ứng dụng web của mình.
+	- Khi cần liên kết dữ liệu từ Spring Controller vào giao diện để hiển thị dữ liệu cho người dùng.
