@@ -1,0 +1,62 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.65;
+}
+
+body {
+    height: 100vh;
+}
+
+.body .row .image_wrap:hover {
+    cursor: pointer;
+    background-color: #10c9c3;
+    opacity: 0.5;
+}
+
+.logo-img {
+    width: 30px;
+}
+
+.nav-link:hover {
+    color: black;
+    font-weight: 500;
+}
+
+.font-small {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.navbar-nav .active .nav-link {
+    color: #10c9c3 !important;
+}
+
+.header {
+    background: url(../images/about_me/header-about-me.jpg) no-repeat center;
+    object-fit: cover;
+}
+
+.header .navbar {
+    background-color: transparent;
+}
+
+
+
+.footer {
+    background-color: black;
+}
+
+.footer .company-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer .footer-detail {
+    font-size: 14px;
+    color: #bcbcbc;
+}
+
+.footer .footer-detail,
+.contact-detail {
+    font-family: 'Nunito Sans', sans-serif;
+}
