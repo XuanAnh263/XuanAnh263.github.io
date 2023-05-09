@@ -1,5 +1,5 @@
 
-								-------------------- SPRING MVC --------------------
+						-------------------- SPRING MVC --------------------
 1.What:
 	- Spring MVC là một framework mô hình MVC (Model-View-Controller) để xây dựng các ứng dụng web Java. Nó cung cấp các thành phần, tiện ích và quy tắc để phát triển các ứng dụng web dễ dàng và hiệu quả.
 
@@ -30,7 +30,7 @@
 
 
 
-								-------------------- THYMELEAF --------------------
+						-------------------- THYMELEAF --------------------
 
 1. What:
 	- Thymeleaf là một template engine, tức là một công cụ giúp bạn tạo ra các giao diện người dùng cho ứng dụng web của mình. Thymeleaf cho phép bạn viết các mẫu HTML, CSS và JavaScript để tạo các giao diện động cho ứng dụng web của bạn.
