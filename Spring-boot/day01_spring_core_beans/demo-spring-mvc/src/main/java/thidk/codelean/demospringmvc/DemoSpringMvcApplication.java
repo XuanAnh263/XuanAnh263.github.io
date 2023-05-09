@@ -14,9 +14,9 @@ public class DemoSpringMvcApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoSpringMvcApplication.class, args);
 	}
-	@GetMapping("/greeting")
-	public String greeting(@RequestParam(name = "name", required = false, defaultValue = "Xuan Anh") String name, Model model) {
-		model.addAttribute("name", name);
-		return "greeting";
-	}
+// 	@GetMapping("/greeting")
+// 	public String greeting(@RequestParam(name = "name", required = false, defaultValue = "Xuan Anh") String name, Model model) {
+// 		model.addAttribute("name", name);
+// 		return "greeting";
+// 	}
 }
