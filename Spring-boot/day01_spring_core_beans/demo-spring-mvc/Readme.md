@@ -4,9 +4,9 @@
 	- Spring MVC là một framework mô hình MVC (Model-View-Controller) để xây dựng các ứng dụng web Java. Nó cung cấp các thành phần, tiện ích và quy tắc để phát triển các ứng dụng web dễ dàng và hiệu quả.
 2. How:
 	Spring MVC cho phép phát triển các ứng dụng web Java bằng cách phân chia các thành phần của ứng dụng thành các phần khác nhau, bao gồm:
-	- Model: Lớp đại diện cho dữ liệu và luật nghiệp vụ của ứng dụng.
-	- View: Phần hiển thị dữ liệu cho người dùng.
- 	- Controller: Lớp xử lý yêu cầu của người dùng và điều phối các hoạt động giữa Model và View.
+	- Model: Lớp đại diện cho dữ liệu và luật nghiệp vụ của ứng dụng. (những file như POJO Service, DAO)
+	- View: Phần hiển thị dữ liệu cho người dùng. (các file JSP, html,...)
+ 	- Controller: Lớp xử lý yêu cầu của người dùng và điều phối các hoạt động giữa Model và View. (Chính là Dispatcher Controller, Controller và Handler Mapping)
 	Spring MVC sử dụng các annotation để định nghĩa các lớp, phương thức và thuộc tính trong ứng dụng. Nó cũng cung cấp các lớp hỗ trợ như các lớp xử lý định tuyến, bộ điều khiển của Form và các lớp hỗ trợ bảo mật.
 3. Why:
 	Spring MVC cung cấp nhiều lợi ích để phát triển các ứng dụng web Java, bao gồm:
@@ -24,8 +24,26 @@
 	- Phát triển các ứng dụng web có yêu cầu về hiệu suất cao: Spring MVC cung cấp tính năng tối ưu hóa hiệu suất và giảm thiểu thời gian phản hồi của ứng dụng, cho phép phát triển các ứng dụng web có yêu cầu về hiệu suất cao.
 	- Phát triển các ứng dụng web linh hoạt và dễ dàng mở rộng: Spring MVC là một framework linh hoạt và dễ dàng mở rộng, cho phép phát triển các ứng dụng web linh hoạt và dễ dàng mở rộng để đáp ứng các yêu cầu của doanh nghiệp.
 
+5. Flow trong spring mvc: 
+	- Bất kỳ request nào tới ứng dụng web đề sẽ gửi tới Dispatcher Servlet (front controller)
+	-  từ Dispatcher Servlet sẽ xử dụng Handler Mapping để biết được controller nào sẽ xử lý request đó
+	-  Controller nhận request, gọi tới các class service thích hợp để xử lý yêu cầu
+	-  Sau khi xử lý xong, Controller sẽ nhận được model từ tầng Service hoặc tầng DAO
+	-  Controller gửi model vừa nhận được với Dispatcher Servlet
+	-  Dispatcher Servlet sẽ tìm các mẫu view, sử dụng view resolver và truyền model vào nó
+	-  View template, model, view page được build và gửi trả lại Dispatcher Servlet
+	-  Dispatcher Servlet gửi một page view tới trình duyệt để hiện thị nó cho ng dùng
 
+6. Các cú pháp cơ bản
+	- Controller: Đây là thành phần chính của Spring MVC, nơi xử lý các yêu cầu web. Một controller được đánh dấu bằng @Controller annotation và các phương thức xử lý yêu cầu được đánh dấu bằng @RequestMapping annotation.
+@Controller
+public class MyController {
 
+   @RequestMapping("/hello")
+   public String hello() {
+      return "hello-page";
+   }
+}
 
 
 
