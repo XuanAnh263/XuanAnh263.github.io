@@ -44,6 +44,7 @@ public class MyController {
       return "hello-page";
    }
 }
+
 	- RequestMapping: Annotation này được sử dụng để ánh xạ một URL đến một phương thức xử lý tương ứng trong controller. Bạn có thể chỉ định HTTP method, đường dẫn URL và các thông số khác.
 	
 @RequestMapping(value = "/hello", method = RequestMethod.GET)
@@ -51,6 +52,7 @@ public String hello() {
    // Xử lý yêu cầu
    return "hello-page";
 }
+
 	- ModelAttribute: Annotation này được sử dụng để đánh dấu một phương thức trong controller, đưa ra dữ liệu mà controller cần truyền đến view. Dữ liệu này sẽ được tự động gắn vào model và có thể sử dụng trong view.
 
 @RequestMapping("/user")
