@@ -36,16 +36,28 @@
 
 6. Các cú pháp cơ bản
 	- Controller: Đây là thành phần chính của Spring MVC, nơi xử lý các yêu cầu web. Một controller được đánh dấu bằng @Controller annotation và các phương thức xử lý yêu cầu được đánh dấu bằng @RequestMapping annotation.
+	
 @Controller
 public class MyController {
-
    @RequestMapping("/hello")
    public String hello() {
       return "hello-page";
    }
 }
+	- RequestMapping: Annotation này được sử dụng để ánh xạ một URL đến một phương thức xử lý tương ứng trong controller. Bạn có thể chỉ định HTTP method, đường dẫn URL và các thông số khác.
+	
+@RequestMapping(value = "/hello", method = RequestMethod.GET)
+public String hello() {
+   // Xử lý yêu cầu
+   return "hello-page";
+}
+	- ModelAttribute: Annotation này được sử dụng để đánh dấu một phương thức trong controller, đưa ra dữ liệu mà controller cần truyền đến view. Dữ liệu này sẽ được tự động gắn vào model và có thể sử dụng trong view.
 
-
+@RequestMapping("/user")
+public String getUser(@ModelAttribute("user") User user) {
+   // Xử lý yêu cầu
+   return "user-page";
+}
 
 						-------------------- THYMELEAF --------------------
 						
