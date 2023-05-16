@@ -1,0 +1,161 @@
+* {
+    font-family: Inter, sans-serif;
+    font-size: 17px;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+.font-poppin {
+    font-family: Poppins, sans-serif;
+}
+
+.header-area {
+    font-weight: 500;
+}
+
+.header-area .navbar .nav-link,
+.right-bar a {
+    color: rgb(23, 23, 23);
+}
+
+.right-bar .text-second {
+    color: rgb(160, 161, 163);
+}
+
+
+.btn {
+    color: #fff;
+    background-color: #ec595a;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    background-color: #000;
+    color: #ec595a;
+    animation-timing-function: 1s;
+}
+/* .right-bar .btn {
+    color: white;
+    font-weight: 700;
+    padding: 10px 32px;
+    background-color: rgb(236, 89, 90);
+    transition: all 0.5s;
+}
+
+.right-bar .btn:hover {
+    color: #ec595a;
+    background-color: black;
+    animation-timing-function: 1s;
+} */
+
+.middle-bar i {
+    font-size: 12px;
+}
+
+.shape {
+    position: absolute;
+}
+
+.main .container {
+    margin-top: 215px;
+    margin-bottom: 165px;
+}
+
+.sign-up-wrapper {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px 0px rgba(82, 63, 105, 0.15);
+    ;
+}
+
+
+.row .bgFFEDED {
+    background-color: #FFEDED;
+}
+
+main .shapes {
+    width: 95px;
+    height: 36px;
+    border: solid 3px black;
+}
+
+.footer {
+    background-color: black;
+    position: relative;
+}
+
+
+
+.footer .footer-detail {
+    font-weight: 400;
+    color: #ffffff99;
+}
+
+.footer .footer-detail:hover {
+    color: white;
+}
+
+.footer .footer-head {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.footer .font-bolder {
+    font-weight: 600;
+}
+
+.footer .subcribe {
+    padding: 10px 0px;
+    background-color: #3c474c;
+    font-weight: 600;
+}
+
+.footer .subcribe:hover {
+    background-color: #ec595a;
+}
+
+.footer .footer-bot {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer .footer-bottom-menu li {
+    display: inline-block;
+}
+
+.footer .footer-bottom-menu li a {
+    color: #ffffff99;
+    font-size: 0.875rem;
+}
+
+.footer .social-link li {
+    display: inline-block;
+    background: transparent;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #fff;
+    border-radius: 0.625rem;
+    transition: 0.3s ease-out;
+}
+
+.footer .social-link li a i {
+    padding-top: 0.5rem;
+    color: #fff;
+    font-size: 0.875rem;
+
+}
+
+
+.footer .social-link li:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.footer .social-link li:hover a i {
+    color: black;
+}
